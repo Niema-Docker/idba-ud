@@ -3,7 +3,7 @@ FROM alpine:latest
 
 # install IDBA-UD
 RUN apk update && \
-    apk add --no-cache bash gcc make musl-dev && \
+    apk add --no-cache bash g++ make musl-dev && \
     wget -qO- "https://github.com/loneknightpy/idba/releases/download/1.1.3/idba-1.1.3.tar.gz" | tar -zx && \
     cd idba-* && \
     ./configure && \
